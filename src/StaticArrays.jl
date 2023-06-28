@@ -8,8 +8,6 @@ import Base: getindex, setindex!, size, similar, vec, show, length, convert, pro
              iszero, sum, prod, count, any, all, minimum, maximum, extrema,
              copy, read, read!, write, reverse
 
-import Statistics: mean
-
 using Random
 import Random: rand, randn, randexp, rand!, randn!, randexp!
 using Core.Compiler: return_type
@@ -135,5 +133,7 @@ include("pinv.jl")
 
 include("precompile.jl")
 _precompile_()
+
+include("extensions.jl")
 
 end # module
